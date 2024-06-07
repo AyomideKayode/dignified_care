@@ -7,7 +7,11 @@ Flask app to handle contact form submissions.
 from flask import Flask, request, jsonify, render_template
 import smtplib
 from email.mime.text import MIMEText
+from dotenv import load_dotenv
 import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 
