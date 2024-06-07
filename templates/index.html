@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dignified Living Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Dignified Living Care</h1>
+    </header>
+    <section id="services">
+      <h2>Services Offered</h2>
+      <ul>
+        <li>Day Time and Evening Care</li>
+        <li>Help with basic domestic chores</li>
+        <li>Help with basic personal care</li>
+        <li>Help accessing local leisure and social activities</li>
+        <li>Help with shopping excursions</li>
+        <li>Support with cooking meals</li>
+        <li>Providing companionship</li>
+        <li>Support with medication</li>
+        <li>Overnight Care</li>
+        <li>Specialist Care</li>
+        <li>24 Hr Live In Care</li>
+        <li>Respite Care</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>

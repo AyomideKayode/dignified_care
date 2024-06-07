@@ -1,0 +1,6 @@
+# .gitignore file
+*.pyc
+*.pyo
+
+# Ignore .env file
+.env
