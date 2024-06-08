@@ -2,5 +2,6 @@
 *.pyc
 *.pyo
 
-# Ignore .env file
+# Ignore .env and venv file
 .env
+venv
