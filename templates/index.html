@@ -4,41 +4,170 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dignified Living Care</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
   </head>
   <body>
     <header>
-      <h1>Dignified Living Care</h1>
+      <a href="index.html" class="logo"
+        ><span class="dig_care">Dignified Living Care</span></a
+      >
+      <nav>
+        <ul>
+          <li><a href="#banner">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+
+    <section id="banner" class="banner banner-home">
+      <div class="container">
+        <div class="banner-text">
+          <h1>
+            Welcome to <br />
+            <span>Dignified <em class="lightblue">Living care</em></span>
+          </h1>
+          <p>
+            Your well-being is our priority. We provide compassionate care to
+            ensure you live with dignity and comfort.
+          </p>
+          <a href="#contact" class="btn-main">Find out more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        At Dignified Living Care, we are committed to providing the highest
+        quality of care for our clients. Our experienced team offers
+        personalized services to meet the unique needs of each individual. We
+        believe in promoting independence, dignity, and respect for all our
+        clients.
+      </p>
+    </section>
+
     <section id="services">
       <h2>Services Offered</h2>
+      <div class="services-grid">
+        <div class="service-item">Day Time and Evening Care</div>
+        <div class="service-item">Help with basic domestic chores</div>
+        <div class="service-item">Help with basic personal care</div>
+        <div class="service-item">
+          Help accessing local leisure and social activities
+        </div>
+        <div class="service-item">Help with shopping excursions</div>
+        <div class="service-item">Support with cooking meals</div>
+        <div class="service-item">Providing companionship</div>
+        <div class="service-item">Support with medication</div>
+        <div class="service-item">Overnight Care</div>
+        <div class="service-item">Specialist Care</div>
+        <div class="service-item">24 Hr Live In Care</div>
+        <div class="service-item">Respite Care</div>
+      </div>
+    </section>
+
+    <section id="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img
+            src="{{ url_for('static', filename='member1.jpg') }}"
+            alt="Team Member 1"
+          />
+          <h3>John Doe</h3>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="{{ url_for('static', filename='member2.jpg') }}"
+            alt="Team Member 2"
+          />
+          <h3>Jane Smith</h3>
+          <p>Head of Care Services</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="{{ url_for('static', filename='member3.jpg') }}"
+            alt="Team Member 3"
+          />
+          <h3>Emily Johnson</h3>
+          <p>Senior Caregiver</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="text-block">
+      <div class="container">
+        <div class="col-66">
+          <h2>Contact Us</h2>
+          <h3>What can we help you with?</h3>
+          <!-- <div class="status"></div> -->
+          <div id="contact-form" class="contact-form">
+            <form method="post" action="">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone number"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your message"
+                required
+              ></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box-shadow contact-box-shaddow">
+            <h3>Contact us</h3>
+            <p>Office address</p>
+            <span>
+              The Studio<br />
+              307 Hotwell Road<br />
+              Hotwell<br />
+              Bristol<br />
+              BS8 4NQ
+            </span>
+
+            <p>General enquiries</p>
+            <span> +44 117 463 3667 </span>
+
+            <p>Recruitment</p>
+            <span> +44 117 463 3667 </span>
+
+            <p>Opening hours: 24/7</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Dignified Living Care. All rights reserved.</p>
       <ul>
-        <li>Day Time and Evening Care</li>
-        <li>Help with basic domestic chores</li>
-        <li>Help with basic personal care</li>
-        <li>Help accessing local leisure and social activities</li>
-        <li>Help with shopping excursions</li>
-        <li>Support with cooking meals</li>
-        <li>Providing companionship</li>
-        <li>Support with medication</li>
-        <li>Overnight Care</li>
-        <li>Specialist Care</li>
-        <li>24 Hr Live In Care</li>
-        <li>Respite Care</li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>
