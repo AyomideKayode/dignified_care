@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/logo_small1.png') }}"
+      type="image/png"
+    />
     <title>Dignified Living Care</title>
     <link
       rel="stylesheet"
@@ -10,12 +15,16 @@
     />
   </head>
   <body>
-    <header>
-      <a href="index.html" class="logo"
-        ><span class="dig_care">Dignified Living Care</span></a
-      >
-      <nav>
-        <ul>
+    <header id="home" data-role="Header" class="home-header">
+      <a href="/"
+        ><img
+          src="../static/images/Logos/PNG/Artboard 13.png"
+          alt="logo_white"
+          class="logo_1"
+          style="cursor: pointer"
+      /></a>
+      <nav class="home-nav">
+        <ul class="navigation-links2-nav navigation-links">
           <li><a href="#banner">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -23,23 +32,37 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="home-btn-group">
+        <button class="button header_btn">
+          <a href="#contact">Contact Us</a>
+        </button>
+      </div>
     </header>
 
     <section id="banner" class="banner banner-home">
-      <div class="container">
+      <div class="container banner_grid">
         <div class="banner-text">
+          <h1>Welcome to</h1>
           <h1>
-            Welcome to <br />
-            <span>Dignified <em class="lightblue">Living care</em></span>
+            <span class="violet"
+              >Dignified <em class="lightblue">Living care</em></span
+            >
           </h1>
           <p>
             Your well-being is our priority. We provide compassionate care to
             ensure you live with dignity and comfort.
           </p>
-          <a href="#contact" class="btn-main">Find out more</a>
+          <a href="#contact" class="header_btn">Find out more</a>
+        </div>
+        <div class="banner_img">
+          <img
+            src="../static/images/nurse_with-elderly.webp"
+            alt="banner_img"
+          />
         </div>
       </div>
     </section>
+    <div class="content-divider"></div>
 
     <section id="about">
       <h2>About Us</h2>
@@ -129,7 +152,7 @@
                 required
               ></textarea>
 
-              <button type="submit">Submit</button>
+              <button type="submit" class="submit_button">Submit</button>
             </form>
           </div>
         </div>

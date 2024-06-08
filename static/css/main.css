@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*==========================================================================
     Reset  - ayomidekay7@gmail.com
   ========================================================================== */
@@ -97,10 +99,43 @@ video {
   --grey: #f8f8f8;
   --lightgrey: #ececec;
   --black: #525252;
+  /* rem/pixel measurements */
+  --dl-space-space-halfunit: 0.5rem;
+  --dl-space-space-halfandquarterunit: 0.8rem;
+  --dl-space-space-unit: 1rem;
+  --dl-space-space-oneandhalfunits: 1.5rem;
+  --dl-space-space-twounits: 2rem;
+  --dl-space-space-twoandhalfunits: 2.5rem;
+  --dl-space-space-threeunits: 3rem;
+  --dl-space-space-fourunits: 4rem;
+  --dl-space-space-fiveunits: 5rem;
+  --dl-space-space-sixunits: 6rem;
+  /* screen sizes */
+  --dl-size-size-midmaxwidth: 1344px;
+  --dl-size-size-maxwidth: 1400px;
+  --dl-size-size-bigtabmaxwidth: 800px;
+  --dl-size-size-tabmaxwidth: 710px;
+  --dl-size-size-mobilemaxwidth: 480px;
+  /* rem sizes (px) */
+  --dl-size-size-xsmall: 1rem;
+  --dl-size-size-small: 3rem;
+  --dl-size-size-medium: 6rem;
+  --dl-size-size-large: 9rem;
+  --dl-size-size-xlarge: 12rem;
+  --dl-size-size-xxlarge: 18rem;
+  /* radius */
+  --dl-radius-radius-radius2: 2px;
+  --dl-radius-radius-radius4: 4px;
+  --dl-radius-radius-radius8: 8px;
+  --dl-radius-radius-radius10: 10px;
+  --dl-radius-radius-round: 50px;
 }
 
 .lightblue {
   color: var(--lightblue);
+}
+.violet {
+  color: var(--violet);
 }
 .darkblue {
   color: var(--darkblue);
@@ -111,8 +146,6 @@ video {
 .green {
   color: var(--green);
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   transition: all 0.3s ease-out;
@@ -128,6 +161,7 @@ video {
 
 html {
   scroll-behavior: smooth;
+  line-height: 1.15;
 }
 
 body {
@@ -141,6 +175,7 @@ body {
 img {
   width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
 button {
@@ -148,29 +183,27 @@ button {
   font-size: 20px;
   font-weight: 600;
   color: var(--black);
+  text-transform: none;
 }
 
-.btn-main {
-  color: var(--black);
-  font-size: 16px;
-  font-weight: 600;
-  background-color: var(--orange);
-  margin: 40px 0;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focus,
+[type='button']:-moz-focus,
+[type='reset']:-moz-focus,
+[type='submit']:-moz-focus {
+  outline: 1px dotted ButtonText;
 }
 
 a {
   color: var(--black);
   text-decoration: none;
-}
-
-.btn-main:hover {
-  background-color: var(--darkgreen);
-  color: #ffffff;
 }
 
 .btn-second {
@@ -276,92 +309,162 @@ em {
   width: 80%;
 }
 
-header {
-  /* background-color: #333; */
-  color: #555;
-  padding: 1.25rem;
-  text-align: center;
+/*==========================================================================
+    Header  - ayomidekay7@gmail.com
+  ========================================================================== */
+
+.home-header {
   width: 100%;
-}
-
-span.dig_care {
-  padding-top: 20px;
-  /* border: 2px solid green; */
-  padding: 10px;
-  text-align: center;
-}
-
-.logo {
-  background: url('../images/dignified_care-logo.png') no-repeat center;
-  background-size: contain;
-  /* border: 2px solid red; */
-  width: 60px;
-  height: 50px;
-  text-indent: 100%;
-  white-space: nowrap;
-  margin: -16px auto 0;
-  float: left;
-  /* display: block; */
-  /* overflow: hidden; */
-}
-
-header nav ul {
-  list-style-type: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
+  border: 2px solid var(--blue);
+  /* max-width: var(--dl-size-size-maxwidth); */
+  align-items: center;
+  padding: var(--dl-space-space-unit)
+    var(--dl-space-space-threeunits);
+  justify-content: space-between;
 }
 
-header nav ul li {
-  margin: 0 15px;
+.logo_1 {
+  height: 3.5rem;
 }
 
-header nav ul li a {
-  color: var(--black);
+.home-nav {
+  display: flex;
+}
+
+.navigation-links2-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* flex: 0 0 auto; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.home-nav .navigation-links2-nav li {
+  margin-left: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-halfunit);
+  font-size: 18px;
+}
+
+.home-nav .navigation-links2-nav li a,
+.home-nav-mobile .navigation-links2-nav li a {
+  color: var(--dl-color-davy-gray);
   text-decoration: none;
 }
 
+.home-nav .navigation-links2-nav li a:hover,
+.home-nav-mobile .navigation-links2-nav li a:hover {
+  font-style: italic;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--violet);
+  text-decoration: underline;
+}
+
+.header_btn {
+  background-color: var(--violet);
+  color: var(--grey);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.header_btn a {
+  color: var(--grey);
+}
+
+.header_btn:hover {
+  background-color: var(--lightblue);
+  color: var(--darkblue);
+}
+
+.header_btn a:hover {
+  color: var(--darkblue);
+}
+
+/*==========================================================================
+    Banner  - ayomidekay7@gmail.com
+  ========================================================================== */
+
 .banner {
-  background: var(--violet);
-  height: 460px;
-  color: #ffffff;
-  background-size: 900px auto;
-  background-position: 70% 100%;
+  width: 100%;
+  min-height: 75vh;
+  /* border: 2px solid yellowgreen; */
+  color: var(--dl-color-davy-gray);
   background-repeat: no-repeat;
-  padding: 100px 20px;
+  padding: var(--dl-space-space-threeunits) var(--dl-space-space-twounits);
   text-align: center;
 }
 
-.banner-home {
-  background-image: url('../images/blue_nurse_scrub_with_elderly.png');
-  background-position: right;
-  background-size: contain;
+.banner_grid {
+  /* border: 3px solid red; */
+  width: 100%;
+  min-width: var(--dl-size-size-midmaxwidth);
+  padding: var(--dl-space-space-halfunit);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--dl-space-space-oneandhalfunits);
+  align-items: center;
+  justify-content: center;
 }
 
 .banner-text {
   font-family: 'Lora', serif;
-  max-width: 470px;
-  padding: 15px 15px 0px 15px;
+  max-width: 500px;
   text-align: left;
+  width: 100%;
+  display: flex;
+  margin-left: var(--dl-space-space-twounits);
+  flex-direction: column;
 }
 
 .banner-text h1 {
-  font-size: 45px;
+  font-size: 60px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 50px;
+}
+
+.banner-text span {
+  font-size: 50px;
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .banner-text p {
   font-size: 16px;
   font-weight: 300;
-  line-height: 20px;
+  line-height: 1.8;
   margin-top: 15px;
 }
 
-.banner-text span {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
+.banner .header_btn {
+  margin-top: 15px;
+  width: 35%;
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
 }
+
+.banner .header_btn:hover {
+  transform: scale(1.1);
+}
+
+.banner_img img {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 50px;
+}
+
+.content-divider {
+  height: 0.75em;
+  background: linear-gradient(to left, #53e0f4, #6d4bd3, #2a707a);
+}
+
 
 #about {
   padding: 50px 20px;
@@ -529,7 +632,7 @@ textarea {
   border-bottom: 1px solid var(--lightgrey);
 }
 
-button {
+.submit_button {
   background-color: var(--violet);
   width: 50%;
   margin-left: 3.5%;
