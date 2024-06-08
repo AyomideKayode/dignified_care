@@ -29,18 +29,20 @@ def home():
 def submit_form():
     try:
         name = request.form.get('name')
+        phone = request.form.get('phone')
         email = request.form.get('email')
         message = request.form.get('message')
 
+        # Log received form data
         print(
-            f"Received form data - Name: {name}, Email: {email}, Message: {message}")
+            f"Received form data - Name: {name}, Phone: {phone}, Email: {email}, Message: {message}")
 
         # Create the email content
         email_content = f"Name: {name}\nEmail: {email}\nMessage: {message}"
         msg = MIMEText(email_content)
-        msg['Subject'] = 'New Contact Form Submission'
+        msg['Subject'] = 'Dignified Care New Contact Form Submission'
         msg['From'] = f"{name} <{email}>"
-        msg['To'] = 'kazzywiz7@gmail.com'
+        msg['To'] = 'admin@dignifiedcare.uk'
 
         # Send the email
         try:
@@ -61,7 +63,8 @@ def submit_form():
     except Exception as e:
         print(f"Failed to process form data: {e}")
         return jsonify(
-            {"status": "error", "message": f"Form data processing error: {e}"}), 500
+            {"status": "error", "message":
+             f"Form data processing error: {e}"}), 500
 
 
 if __name__ == '__main__':
