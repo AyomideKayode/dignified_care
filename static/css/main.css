@@ -533,7 +533,8 @@ em {
 
 .services {
   max-width: var(--dl-size-size-maxwidth);
-  margin: var(--dl-space-space-threeunits) auto var(--dl-space-space-fiveunits) auto;
+  margin: var(--dl-space-space-threeunits) auto var(--dl-space-space-fiveunits)
+    auto;
   padding: var(--dl-space-space-oneandhalfunits) 40px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -680,7 +681,7 @@ em {
 }
 
 .team h2 {
-  font-family: "Hammersmith One", sans-serif;
+  font-family: 'Hammersmith One', sans-serif;
   text-align: center;
   color: var(--lightblue);
 }
@@ -709,7 +710,7 @@ em {
 .team_img img {
   width: 100%;
   vertical-align: middle;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .team_item:hover .team_img img {
@@ -832,6 +833,14 @@ textarea {
   margin-bottom: 20px;
 }
 
+.text-block {
+  margin: var(--dl-space-space-twoandhalfunits) auto;
+}
+
+.text-block .container .col-66 h2 {
+  color: var(--violet);
+}
+
 .contact-box-shaddow h3 {
   display: block;
   padding-bottom: 20px;
@@ -842,7 +851,7 @@ textarea {
 .contact-box-shaddow h3:before {
   content: '';
   display: block;
-  background: url('../images/dignified_care-logo.png') no-repeat;
+  background: url('../images/Icons/PNG/Artboard\ 23.png') no-repeat;
   background-size: 86%;
   width: 53px;
   height: 45px;
@@ -913,5 +922,4 @@ footer ul li a {
     grid-template-columns: 1fr;
     max-width: var(--dl-size-size-tabmaxwidth);
   }
-
 }
