@@ -929,5 +929,13 @@ footer ul li a {
   .services {
     grid-template-columns: 1fr;
     max-width: var(--dl-size-size-tabmaxwidth);
+    margin: auto var(--dl-space-space-unit);
+    padding: var(--dl-space-space-oneandhalfunits);
+  }
+
+  .services-grid {
+    max-width: var(752px);
+    /* height: auto; */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
