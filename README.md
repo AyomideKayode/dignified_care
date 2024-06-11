@@ -78,6 +78,10 @@ EMAIL_ADDRESS=your_email@gmail.com
 EMAIL_PASSWORD=your_app_password
 ```
 
+An app password is a long, randomly generated password that you provide only once instead of your regular password when signing in to an app or device that doesn't support two-step verification.
+
+[Generate one here](https://myaccount.google.com/apppasswords)
+
 ### Usage
 
 **Running the Application Locally:**
@@ -87,6 +91,19 @@ EMAIL_PASSWORD=your_app_password
 ```bash
 python app.py
 ```
+
+or with gunicorn
+
+```bash
+gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
+```
+
+Here's a breakdown of the command:
+
+- `gunicorn`: The Gunicorn server.
+- `-w 4`: This flag specifies the number of worker processes. Adjust this number based on your app’s requirements and server resources.
+- `-b 0.0.0.0:8000`: This flag binds the server to all IP addresses on port 8000. Adjust the port if necessary.
+- `wsgi:app`: This specifies the module and application. wsgi is the module name (i.e., wsgi.py without the .py extension), and app is the Flask application instance.
 
 #### 2. **Open your web browser and go to:**
 
