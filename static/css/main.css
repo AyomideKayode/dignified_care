@@ -326,21 +326,23 @@ em {
   height: 3.5rem;
 }
 
-.home-nav {
+/* .home-nav {
   display: flex;
-}
+} */
 
 .navigation-links2-nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--dl-space-space-halfunit);
+  justify-items: center;
   align-items: center;
-  flex-direction: row;
 }
 
 .home-nav .navigation-links2-nav li {
-  margin-left: var(--dl-space-space-twounits);
+  /* margin-left: var(--dl-space-space-twounits); */
   padding: var(--dl-space-space-halfunit);
   font-size: 18px;
 }
@@ -353,8 +355,8 @@ em {
 
 .home-nav .navigation-links2-nav li a:hover,
 .home-nav-mobile .navigation-links2-nav li a:hover {
-  font-style: italic;
-  font-family: 'Lora', serif;
+  /* font-style: italic; */
+  /* font-family: 'Lora', serif; */
   font-weight: 700;
   color: var(--violet);
   text-decoration: underline;
@@ -364,7 +366,12 @@ em {
   background-color: var(--violet);
   color: var(--grey);
   border: none;
-  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 0px;
+  /* horizontal-offset, vertical-offset, blur-radius & color of the shadow */
+  box-shadow: 2px 4px 10px #304b72;
   padding: 8px 16px;
   cursor: pointer;
 }
@@ -376,6 +383,7 @@ em {
 .header_btn:hover {
   background-color: var(--lightblue);
   color: var(--darkblue);
+  transform: scale(0.9);
 }
 
 .header_btn a:hover {
@@ -429,6 +437,7 @@ em {
   font-family: 'Hammersmith One', sans-serif;
   font-weight: 600;
   font-style: normal;
+  word-spacing: -6px;
 }
 
 .banner-text p {
@@ -506,15 +515,14 @@ em {
   font-family: 'Raleway', sans-serif;
   /* width: 100%; */
   max-width: 640px;
-  text-align: right;
+  text-align: center;
   display: flex;
   margin-left: var(--dl-space-space-fourunits);
   flex-direction: column;
 }
 
 .about_text h1 {
-  font-size: 45px;
-  font-weight: 500;
+  font-size: 40px;
   font-weight: 700;
   line-height: 50px;
 }
@@ -522,7 +530,7 @@ em {
 .about_text p {
   font-size: 18px;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   color: #333;
   margin-top: 10px;
 }
