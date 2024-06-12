@@ -926,6 +926,9 @@ footer ul li a {
 }
 
 @media (max-width: 1040px) {
+  /*==========================================================================
+    Banner  - ayomidekay7@gmail.com
+  ========================================================================== */
   .banner {
     padding: var(--dl-space-space-twounits) var(--dl-space-space-unit);
   }
@@ -943,11 +946,26 @@ footer ul li a {
     font-size: 48px;
   }
 
+  /*==========================================================================
+    About  - ayomidekay7@gmail.com
+  ========================================================================== */
+
+  .about_text {
+    margin-left: var(--dl-space-space-twounits);
+  }
+
+  .about_text p {
+    padding: var(--dl-space-space-unit);
+  }
+
+  /*==========================================================================
+    Services  - ayomidekay7@gmail.com
+  ========================================================================== */
   .services {
     /* grid-template-columns: 1fr; */
-    max-width: var(--dl-size-size-bigtabmaxwidth);
-    margin: var(--dl-space-space-twounits) auto var(--dl-space-space-fourunits)
-      auto;
+    max-width: 1024px;
+    margin: var(--dl-space-space-twounits) var(--dl-space-space-oneandhalfunits)
+      var(--dl-space-space-fourunits);
     padding: var(--dl-space-space-unit);
   }
 
@@ -983,6 +1001,14 @@ footer ul li a {
   .service-item h3 {
     font-size: 1em;
     margin-bottom: 8px;
+  }
+
+  /*==========================================================================
+    Team  - ayomidekay7@gmail.com
+  ========================================================================== */
+
+  .team {
+    padding: var(--dl-space-space-twounits) var(--dl-space-space-oneandhalfunits);
   }
 }
 
