@@ -926,6 +926,23 @@ footer ul li a {
 }
 
 @media (max-width: 1040px) {
+  .banner {
+    padding: var(--dl-space-space-twounits) var(--dl-space-space-unit);
+  }
+
+  .banner-text {
+    margin-left: 0;
+  }
+
+  .banner-text h1 {
+    font-size: 45px;
+    line-height: 35px;
+  }
+
+  .banner-text span {
+    font-size: 48px;
+  }
+
   .services {
     /* grid-template-columns: 1fr; */
     max-width: var(--dl-size-size-bigtabmaxwidth);
