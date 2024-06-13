@@ -321,15 +321,12 @@ em {
   align-items: center;
   padding: var(--dl-space-space-unit) var(--dl-space-space-threeunits);
   justify-content: space-between;
+  position: relative;
 }
 
 .logo_1 {
   height: 3.5rem;
 }
-
-/* .home-nav {
-  display: flex;
-} */
 
 .navigation-links2-nav {
   list-style-type: none;
@@ -343,7 +340,6 @@ em {
 }
 
 .home-nav .navigation-links2-nav li {
-  /* margin-left: var(--dl-space-space-twounits); */
   padding: var(--dl-space-space-halfunit);
   font-size: 18px;
 }
@@ -389,6 +385,21 @@ em {
 
 .header_btn a:hover {
   color: var(--darkblue);
+}
+
+/* Mobile styles */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above the nav */
+}
+
+.hamburger.toggled {
+  content: '✕';
+  font-size: 30px;
 }
 
 /*==========================================================================
@@ -1072,7 +1083,65 @@ footer ul li a {
   }
 }
 
-@media (max-width: 768px) {
+/* Media query for screen size 768px or smaller */
+@media screen and (max-width: 768px) {
+  .home-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .home-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .home-nav.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .home-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-links2-nav {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .home-nav li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--dl-color-davy_gray);
+  }
+
+  .home-btn-group {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .banner-text h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
   .services {
     grid-template-columns: 1fr;
     margin: var(--dl-space-space-unit);
