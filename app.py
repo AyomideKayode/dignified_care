@@ -53,8 +53,8 @@ def submit_form():
         A JSON response indicating the status of the form submission.
         If the email is sent successfully, the response
         will have a status of "success" and a HTTP status code of 200.
-        If there is an error during the form submission process,
-        the response will have a status of "error" and a HTTP status code of 500.
+        If there is an error during the form submission process, the response
+        will have a status of "error" and a HTTP status code of 500.
 
     Raises:
         SMTPException:
@@ -80,10 +80,12 @@ def submit_form():
         if cv:
             cv_path = os.path.join(app.config['UPLOAD_FOLDER'], cv.filename)
             cv.save(cv_path)
-            attachments.append(cv_path)  # Save CV file path to attachments list
+            # Save CV file path to attachments list
+            attachments.append(cv_path)
 
         if recommendation:
-            rec_path = os.path.join(app.config['UPLOAD_FOLDER'], recommendation.filename)
+            rec_path = os.path.join(
+                app.config['UPLOAD_FOLDER'], recommendation.filename)
             recommendation.save(rec_path)
             # Save recommendation file path to attachments list
             attachments.append(rec_path)
@@ -99,7 +101,8 @@ def submit_form():
         for file_path in attachments:
             with open(file_path, 'rb') as file:
                 # Create a MIMEApplication object to represent the file
-                part = MIMEApplication(file.read(), Name=os.path.basename(file_path))
+                part = MIMEApplication(
+                    file.read(), Name=os.path.basename(file_path))
                 # Add the file as an attachment to the email
                 part['Content-Disposition'] = f'attachment; filename="{os.path.basename(file_path)}"'
                 msg.attach(part)  # Attach the file to the email
@@ -126,11 +129,13 @@ def submit_form():
         except smtplib.SMTPException as e:
             # Handle SMTP errors and return an error response
             print(f"SMTP error: {e}")
-            return jsonify({"status": "error", "message": f"SMTP error: {e}"}), 500
+            return jsonify({"status": "error", "message":
+                            f"SMTP error: {e}"}), 500
         except Exception as e:
             # Handle general errors and return an error response
             print(f"General error: {e}")
-            return jsonify({"status": "error", "message": f"General error: {e}"}), 500
+            return jsonify({"status": "error", "message":
+                            f"General error: {e}"}), 500
 
     except Exception as e:
         print(f"Failed to process form data: {e}")
