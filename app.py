@@ -25,6 +25,11 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/recruitement', methods=['GET'], strict_slashes=False)
+def recruitement():
+    return render_template('recruitement.html')
+
+
 @app.route('/submit', methods=['POST'], strict_slashes=False)
 def submit_form():
     try:

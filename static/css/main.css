@@ -801,6 +801,8 @@ em {
 
 input[type='text'],
 input[type='email'],
+input[type='tel'],
+input[type='file'],
 textarea {
   padding: 20px;
   margin: 8px 0;
@@ -815,7 +817,9 @@ textarea {
 }
 
 input[type='text'],
-input[type='email'] {
+input[type='email'],
+input[type='tel'],
+input[type='file'] {
   width: 70%;
 }
 

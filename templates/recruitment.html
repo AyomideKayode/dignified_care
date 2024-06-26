@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="icon"
-      href="{{ url_for('static', filename='images/Icons/PNG/Artboard 23.png') }}"
-      type="image/png"
-    />
-    <title>Dignified Living Care</title>
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
@@ -17,9 +11,11 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
+    <title>Join Our Team</title>
   </head>
   <body>
-    <header id="home" data-role="Header" class="home-header">
+    <!-- Header Section -->
+    <header class="home-header">
       <a href="/"
         ><img
           src="../static/images/Logos/PNG/Artboard 13.png"
@@ -29,187 +25,124 @@
       /></a>
       <button class="hamburger" id="hamburger">&#9776;</button>
       <nav class="home-nav" id="nav-menu">
-        <ul class="navigation-links2-nav navigation-links">
-          <li><a href="#banner">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
+        <ul class="navigation-links2-nav">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#positions">Open Positions</a></li>
+          <li><a href="#benefits">Why Join Us</a></li>
+          <li><a href="#team">Our Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="home-btn-group">
-        <button class="button header_btn">
-          <a href="/recruitment">Work with Us</a>
-        </button>
-      </div>
     </header>
 
     <!-- Banner Section -->
     <section id="banner" class="banner banner-home">
       <div class="container banner_grid">
         <div class="banner-text">
-          <h1>Welcome to</h1>
+          <h1>Join Our Team</h1>
           <h1>
             <span class="violet"
-              >Dignified <em class="lightblue">Living Care</em></span
+              >Shape <em class="lightblue">the Future</em> with Us</span
             >
           </h1>
           <p>
-            Your well-being is our priority. We provide compassionate care to
-            ensure you live with dignity and comfort.
+            We're looking for talented individuals to join our dynamic team and
+            help us achieve our mission. If you're passionate about making a
+            difference and want to be part of a team that is shaping the future
+            of healthcare, we'd love to hear from you.
           </p>
-          <a href="/recruitment" class="header_btn">Apply for a job</a>
+          <button class="header_btn">
+            <a href="#positions">Explore Positions</a>
+          </button>
         </div>
         <div class="banner_img">
           <img
-            src="../static/images/nurse_with-elderly.webp"
-            alt="banner_img"
+            src="../static/images/nurse_sat_with-patient.png"
+            alt="Join Us"
           />
         </div>
       </div>
     </section>
-    <div class="content-divider"></div>
 
-    <section id="about" class="about">
+    <!-- About Us Section -->
+    <section class="about" id="about">
       <div class="container">
         <h2>About Us</h2>
         <div class="about_grid">
           <div>
             <img
-              src="../static/images/blue_nurse_scrub_with_elderly.png"
-              alt="nurse_with-elderly"
+              src="../static/images/recruit_about.jpg"
+              alt="Recruitment"
               class="about_img"
               style="cursor: pointer"
             />
           </div>
           <div class="about_text">
-            <h1>Dignified Living Care</h1>
+            <h1>Who We Are</h1>
             <p>
-              At Dignified Living Care, we are committed to providing the
-              highest quality of care for our clients. Our experienced team
-              offers personalized services to meet the unique needs of each
-              individual. We believe in promoting independence, dignity, and
-              respect for all our clients.
+              We are a forward-thinking company committed to making a
+              difference. Our mission is to innovate and lead in our industry
+              and we are dedicated to providing high-quality care and services
+              to our clients. Our team is passionate about improving the lives
+              of individuals and making a positive impact in the community.
+              <br />
+              With a focus on innovation and collaboration, we strive to create
+              a supportive and inclusive work environment. Join us and be part
+              of a team that is shaping the future of healthcare.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <div class="content-divider"></div>
 
-    <section id="services" class="services">
+    <!-- Open Positions Section -->
+    <section class="services" id="positions">
       <div class="services-intro">
-        <h2>Our Services</h2>
+        <h2>Open Positions</h2>
         <p>
-          At Dignified Living Care...Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-          dolore magna aliquam erat volutpat ut wisi enim ad minim quis, nostrud
-          exerci tation
+          We are looking for creative and motivated individuals to join our
+          team. Check out our current job openings below.
         </p>
-        <button class="btn">
-          <a href="#contact">Get Started</a>
-        </button>
       </div>
       <div class="services-grid">
+        <!-- will repeat this block for each job position -->
         <div class="service-item">
-          <div class="icon">📈</div>
-          <h3>Day Time and Evening Care</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
+          <div class="icon">📌</div>
+          <h3>Job Title</h3>
+          <p>Brief description of the job position.</p>
+          <button class="btn">View Details</button>
         </div>
-        <div class="service-item">
-          <div class="icon">⚙️</div>
-          <h3>Help with basic domestic chores</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
+        <!-- End of job position block -->
+      </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="about" id="benefits">
+      <h2>Why Join Us</h2>
+      <div class="about_grid">
+        <div>
+          <img
+            src="../static/images/key_benefits.jpg"
+            alt="Benefits"
+            class="about_img"
+            style="cursor: pointer"
+          />
         </div>
-        <div class="service-item">
-          <div class="icon">💼</div>
-          <h3>Help with shopping excursions</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">💻</div>
-          <h3>Help with basic personal care</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">🖥️</div>
-          <h3>Help accessing local leisure and social activities</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">❤️</div>
-          <h3>Support with cooking meals</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">📈</div>
-          <h3>Providing companionship</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">⚙️</div>
-          <h3>Support with medication</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">💼</div>
-          <h3>Overnight Care</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">💻</div>
-          <h3>Specialist Care</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">🖥️</div>
-          <h3>24 Hr Live In Care</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
-          </p>
-        </div>
-        <div class="service-item">
-          <div class="icon">❤️</div>
-          <h3>Respite Care</h3>
-          <p class="content">
-            Nullam varius ultricies auctor. Vivamus nisi enim, pulvinar id
-            bibendum sed, pretium sit amet augue.
+        <div class="about_text">
+          <h1>Key Benefits</h1>
+          <p>
+            We offer a range of benefits to ensure our team members are well
+            taken care of, including health insurance, flexible working hours,
+            and professional development opportunities. Our team members also
+            enjoy competitive salaries, a supportive work environment, and
+            opportunities for growth and advancement. Join us and be part of a
+            team that values your well-being and invests in your success.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Our Team Section -->
     <section id="team" class="team">
       <h2>Meet our Team</h2>
       <div class="team_container">
@@ -269,6 +202,7 @@
       </div>
     </section>
 
+    <!-- Contact Form Section -->
     <section id="contact" class="text-block">
       <div class="container">
         <div class="col-66">
@@ -278,7 +212,7 @@
             <form method="post" action="">
               <input type="text" name="name" placeholder="Your Name" required />
               <input
-                type="text"
+                type="tel"
                 name="phone"
                 placeholder="Phone number"
                 required
@@ -288,6 +222,16 @@
                 name="email"
                 placeholder="Email address"
                 required
+              />
+              <input
+                type="file"
+                name="cv"
+                accept=".pdf,.doc,.docx"
+                required />
+              <input
+                type="file"
+                name="recommendation"
+                accept=".pdf,.doc,.docx"
               />
               <textarea
                 name="message"
